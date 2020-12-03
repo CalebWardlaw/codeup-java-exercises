@@ -44,14 +44,14 @@ public class HelloWorld {
 //        int x = 4;
 //        x += 5;
 
-        int x = 3;
-        int y = 4;
-        y *= x;
-
-        int x = 10;
-        int y = 2;
-        x /= y;
-        y -= x
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+//
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x
 
         //Assigning a value to a larger variable will still run, but could possibly overflow.
         //Assigning a value to a smaller variable will not run. Incrementing past will cause overflow.
