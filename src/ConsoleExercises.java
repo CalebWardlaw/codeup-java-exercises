@@ -29,7 +29,7 @@ public class ConsoleExercises {
         String wholeSentence = userInput.nextLine();
         System.out.println(wholeSentence);
 
-        System.out.println("")
+        System.out.println("");
     }
 }
 
