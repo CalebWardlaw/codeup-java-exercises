@@ -23,9 +23,9 @@ class Add {
             }
 
             static class Div {
-                int c;
-                void division(int x, int y) {
-                    c = x/y;
+                float b;
+                void division(float x, float y) {
+                    b = x/y;
                 }
             }
 
@@ -55,9 +55,7 @@ class Add {
 
                 Div d = new Div();
                 d.division(a, b);
-                System.out.println("Division : " + d.c);
-
-
+                System.out.println("Division : " + d.b);
             }
         }
     }
