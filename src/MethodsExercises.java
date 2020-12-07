@@ -144,10 +144,15 @@ public class MethodsExercises {
     //Random number generator
     public static class diceRoll {
         public static void main(String[] args) {
+            Scanner diceScan = new Scanner(System.in);
+            System.out.print("Enter number of sides for dice. \n");
+            int diceSides = diceScan.nextInt();
             // Generate random number between 5 to 30
-            double a = 5 + (int)(Math.random() * 30);
+            double a = 1 + (int)(Math.random() * diceSides);
+            double b = 1 + (int)(Math.random() * diceSides);
             // Output is different every time this code is executed
-            System.out.println(a);
+            System.out.println("First roll: " + a);
+            System.out.println("Second roll: " + b);
         }
     }
 
