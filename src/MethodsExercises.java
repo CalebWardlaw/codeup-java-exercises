@@ -1,20 +1,18 @@
 import java.util.Scanner;
 //Class Name
-class Add {
-    int c;
-
-    //Method Name, Why are we using void? Because it's not static?
-    void addition(int x, int y) {
-        c = x + y;
-    }
-
-    //Static class .. it is an inner class aka nested
-    static class Sub {
-        int c;
-
-        void subtraction(int x, int y) {
-            c = x - y;
-        }
+class MethodsExercises {
+        static class Add {
+            int c;
+            //Method Name, Why are we using void? Because it's not static?
+            void addition(int x, int y) {
+                c = x + y;
+            }
+        //Static class .. it is an inner class aka nested
+        static class Sub {
+            int c;
+            void subtraction(int x, int y) {
+                c = x - y;
+            }
 
         static class Mul {
             int c;
@@ -22,12 +20,19 @@ class Add {
                 c = x * y;
             }
 
-            static class Div {
+        static class Div {
                 float b;
                 void division(float x, float y) {
-                    b = x/y;
+                    b = x / y;
                 }
             }
+
+        static class Mod {
+                int c;
+                void modulus(int x, int y) {
+                    c = x%y;
+                }
+        }
 
             public static void main(String[] args) {
                 int a, b;
@@ -56,6 +61,11 @@ class Add {
                 Div d = new Div();
                 d.division(a, b);
                 System.out.println("Division : " + d.b);
+
+                Mod o = new Mod();
+                o.modulus(a, b);
+                System.out.println("Modulus : " + o.c);
+                }
             }
         }
     }
