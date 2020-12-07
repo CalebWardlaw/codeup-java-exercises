@@ -35,7 +35,8 @@ public class MethodsExercises {
 //        }
 //
     public static void main(String[] args) {
-        getInteger(1, 10);
+        getInteger(1, 15);
+        showFactorial();
 //        int a, b;
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter first number");
@@ -83,6 +84,19 @@ public class MethodsExercises {
         return userNumber;
     }
 
+    public static void showFactorial() {
+        Scanner factorialScan = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 15\n");
+        int start = getInteger(1, 15);
+        long factorial = 1;
+        String output ="! = 1";
+        System.out.printf("1%s\n", output);
+        for (int i=2;i<=start;i++){
+            factorial *= i;
+            output += " x " + i;
+            System.out.printf("%d%s = %d\n", i, output, factorial);
+        }
+    }
 
 
 
