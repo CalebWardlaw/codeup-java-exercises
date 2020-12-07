@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import java.lang.Math;
+
+
+
+
 //Class Name
 public class MethodsExercises {
 //        static class Add {
@@ -34,9 +39,24 @@ public class MethodsExercises {
 //            }
 //        }
 //
+
+
+
+
+
+
     public static void main(String[] args) {
-        getInteger(1, 15);
-        showFactorial();
+//        getInteger(1, 15);
+//        showFactorial();
+//          rollDice();
+
+
+
+
+
+
+
+
 //        int a, b;
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter first number");
@@ -67,40 +87,80 @@ public class MethodsExercises {
 //        Mod o = new Mod();
 //        o.modulus(a, b);
 //        System.out.println("Modulus : " + o.c);
-        }
+//        }
 
         //Call in main method
-    public static int getInteger(int min, int max) {
-        Scanner scan = new Scanner(System.in);
+//    public static int getInteger(int min, int max) {
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.printf("Enter a number between %d and %d:\n " , min, max);
+//        int userNumber;
+//        userNumber = scan.nextInt();
+//
+//        if(userNumber < min || userNumber > max) {
+//            getInteger(min, max);
+//        }
+//        System.out.println(userNumber);
+//        return userNumber;
+//    }
+//
+//    public static void showFactorial() {
+//        Scanner factorialScan = new Scanner(System.in);
+//        System.out.print("Enter a number between 1 and 15\n");
+//        //Using previous method
+//        int start = getInteger(1, 15);
+//        //using long due to large calculations
+//        long factorial = 1;
+//        //general output form, factorial will always start with 1
+//        String output ="! = 1";
+//        //format specifier %s for any, this is attached to the output string
+//        System.out.printf("1%s\n", output);
+//        for (int i=2;i<=start;i++){
+//            factorial *= i;
+//            output += " x " + i;
+//            System.out.printf("%d%s = %d\n", i, output, factorial);
+//        }
+//    }
 
-        System.out.printf("Enter a number between %d and %d:\n " , min, max);
-        int userNumber;
-        userNumber = scan.nextInt();
 
-        if(userNumber < min || userNumber > max) {
-            getInteger(min, max);
-        }
-        System.out.println(userNumber);
-        return userNumber;
+
+
+
+
+
+//        Scanner diceScan = new Scanner(System.in);
+//        //Dice needs at least threes sides, otherwise it's a coin
+//        System.out.print("Enter number of sides for dice.\n");
+//        int diceSides = diceScan.nextInt();
+//        System.out.print("Your dice has: " + diceSides + " sides.\n");
+//        System.out.print("Roll the dice!");
+//        //Die 1 = random number between min and max
+//        //Die 2 = random number between min and max
+//        //display chosen numbers
+//        //ask to roll again?
+
     }
 
-    public static void showFactorial() {
-        Scanner factorialScan = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 15\n");
-        int start = getInteger(1, 15);
-        long factorial = 1;
-        String output ="! = 1";
-        System.out.printf("1%s\n", output);
-        for (int i=2;i<=start;i++){
-            factorial *= i;
-            output += " x " + i;
-            System.out.printf("%d%s = %d\n", i, output, factorial);
+    //Random number generator
+    public static class diceRoll {
+        public static void main(String[] args) {
+            // Generate random number between 5 to 30
+            double a = 5 + (int)(Math.random() * 30);
+            // Output is different every time this code is executed
+            System.out.println(a);
         }
     }
+
+
+
+
+
 
 
 
 }
+
+
 
 
 //    public static int getInteger(int min, int max){
