@@ -6,6 +6,25 @@ import java.lang.Math;
 
 //Class Name
 public class MethodsExercises {
+
+        public static double add(double num1, double num2) {
+            return num1 + num2;
+        }
+        public static double subtract(double num1, double num2){
+            return num1 - num2;
+        }
+        public static double multiply(double num1, double num2){
+            return num1 * num2;
+        }
+        public static double divide(double num1, double num2){
+            return num1/num2;
+        }
+        public static double modulus(double num1, double num2){
+            return num1 % num2;
+        }
+
+
+
 //        static class Add {
 //            int c;
 //            //Method Name, Why are we using void? Because it's not static?
@@ -38,7 +57,9 @@ public class MethodsExercises {
 //                c = x%y;
 //            }
 //        }
-//
+
+
+
 
 
 
@@ -155,6 +176,8 @@ public class MethodsExercises {
             System.out.println("Second roll: " + b);
         }
     }
+
+
 
 
 
