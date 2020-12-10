@@ -48,8 +48,9 @@ public class Input {
         return userInput;
     }
 
+    //Using in shapes, changed to enter radius
     public double getDouble(){
-        System.out.print("Enter a number :");
+        System.out.print("Enter radius :");
         return this.scanner.nextDouble();
     }
 //    public double getDouble(double min, double max){
