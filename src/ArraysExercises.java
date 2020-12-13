@@ -2,49 +2,35 @@ import java.util.Arrays;
 
 public class ArraysExercises {
 
-    public static Person[] addPerson(Person[] persons, Person addedPerson) {
+    public static person[] addPerson(person[] persons, person addedPerson){
+        person[] result = Arrays.copyOf(persons, persons.length + 1);
 
-        Person [result] = Arrays.copyof(persons, person.length +1);
-
-        result[3] = new Person(addedPerson.getName());
+        result[3] = new person(addedPerson.getName());
 
         return result;
     }
+
     public static void main(String[] args){
 
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(numbers));
-        //Array.toString required, else it would print memory ID
+        person[] persons = new person[3];
 
-
-        //Creating new array
-        Person[] persons = new Person[3];
-
-        //Objects for Array
-        Person caleb = new Person("Caleb");
-        Person josh = new Person("Josh");
-        Person zek = new Person("Zek");
+        person caleb = new person("Caleb");
+        person josh = new person("Josh");
+        person zek = new person("Zek");
 
         persons[0] = caleb;
         persons[1] = josh;
         persons[2] = zek;
 
-        Person jeff = new Person("Jeff");
+        person jeff = new person("Jeff");
         addPerson(persons, jeff);
+
+
 
     }
 
 
-
 }
 
-
-
-
-    /*
-Create a static method named addPerson. It should accept an array of Person objects,
-as well as a single person object to add to the passed array.
-It should return an array whose length is 1 greater than the passed array,
-with the passed person object at the end of the array.*/
 
 
