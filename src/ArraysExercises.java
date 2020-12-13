@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-
+//Will not work with capital p on persons, why? Class establishment issues
     public static person[] addPerson(person[] persons, person addedPerson){
         person[] result = Arrays.copyOf(persons, persons.length + 1);
 
@@ -12,7 +12,7 @@ public class ArraysExercises {
 
     public static void main(String[] args){
 
-        person[] persons = new person[3];
+        person [] persons = new person[3];
 
         person caleb = new person("Caleb");
         person josh = new person("Josh");
@@ -25,7 +25,9 @@ public class ArraysExercises {
         person jeff = new person("Jeff");
         addPerson(persons, jeff);
 
-
+        for(person person : persons) {
+            System.out.println(person.getName());
+        }
 
     }
 
