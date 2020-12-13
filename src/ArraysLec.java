@@ -1,4 +1,5 @@
 package arraysLecture;
+import java.util.Arrays;
 
 public class ArraysLec {
 
@@ -122,17 +123,24 @@ public class ArraysLec {
         //TODO: Experiment with the following Array methods. Add a few comments explaining what is happening. Bonus: Create your own example.
 
 
-        // Example1:  Array.fill()
+//         Example1:  Array.fill();
 
 //        String[] testArray = new String[4];
-//
+//        //Fills array, size 4, with all dogs
 //        Arrays.fill(testArray, "dogs");
 //        for (String element : testArray) {
 //            System.out.println(element);
 //        }
 
 
-
+//        char[] charArray = {'a','b','c'};
+//
+//        System.out.println(charArray);
+//
+//        Arrays.fill(charArray, 'a');
+//        for (char element : charArray) {
+//            System.out.println(element);
+//        }
 
 
 
@@ -157,6 +165,7 @@ public class ArraysLec {
         // Example 2: Arrays.equals(array1, array2)
         // Returns true if two array elements are equal and in the same order
 
+        //Is returning false due case sensitivity
 //        String[] words = {"Mushroom", "Mushroom"};
 //        String[] words2 = {"Mushroom", "mushroom"};
 //        System.out.println(Arrays.equals(words, words2));
@@ -172,11 +181,11 @@ public class ArraysLec {
         // Example 3: Arrays.copyOf()
         // Returns a copy array of a given array of a given length
 
-//        String[] badgerArray = new String[4];
-//        Arrays.fill(badgerArray, "Badgers");
-//
-//        String[] twoBadgers = Arrays.copyOf(badgerArray, 2);
-//        System.out.println(Arrays.toString(twoBadgers));
+        String[] badgerArray = new String[4];
+        Arrays.fill(badgerArray, "Badgers");
+        //Aray length is four, however this printed copy displays two
+        String[] twoBadgers = Arrays.copyOf(badgerArray, 2);
+        System.out.println(Arrays.toString(twoBadgers));
 
 
 
