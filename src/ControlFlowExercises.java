@@ -33,8 +33,9 @@ public class ControlFlowExercises {
         boolean userContinues = true;
 
         do {
-            System.out.println("What number would you like to go up to?");
+            System.out.println("\nWhat number would you like to go up to?\n");
             int userInt = sc.nextInt();
+            //Below - just used for spacing
             System.out.println();
             System.out.println("Here is your table!");
             System.out.println();
@@ -48,7 +49,7 @@ public class ControlFlowExercises {
                 System.out.format(" %-9d", i*i*i);
                 System.out.println();
             }
-        System.out.print("Would you like to enter another number (y/n)?");
+        System.out.print("\nWould you like to enter another number (y/n)?\n");
             String userResponse = sc.next();
             if(!userResponse.equalsIgnoreCase("y")){
                 userContinues=false;
