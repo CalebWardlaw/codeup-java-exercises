@@ -1,12 +1,32 @@
 package Grades;
-import java.util.Arrays;
+import java.util.ArrayList;
+
 
 public class Student {
     private String name;
-    private int[] grade;
+    private ArrayList<Integer> grades;
 
-    grade = new int[];
+    public Student(String name) {
+        this.name = name;
+        this.grades = new ArrayList<>();
+    }
 
+    // returns the student's name
+    public String getName(){
+    return name;
+    };
+
+    public void addGrade(int grade){
+        this.grades.add(grade);
+    }
+
+    public double getGradeAverage(){
+        int total = 0;
+        for (int grade : grades) {
+            total += grade;
+        }
+        return (double) total / grades.size();
+    }
 
 
 
