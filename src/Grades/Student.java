@@ -31,6 +31,10 @@ public class Student {
 
 
     public static void main(String[]args){
+        Student Caleb = new Student("Caleb");
+        Caleb.addGrade(95);
+        Caleb.addGrade(99);
+        System.out.println(Caleb.getGradeAverage());
 
     }
 }
