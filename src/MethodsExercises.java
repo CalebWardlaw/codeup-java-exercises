@@ -24,7 +24,7 @@ public class MethodsExercises {
         }
 
 
-
+//
 //        static class Add {
 //            int c;
 //            //Method Name, Why are we using void? Because it's not static?
