@@ -1,3 +1,5 @@
+Abstract Classes
+
 Difference between interfaces and abstract classes?
 This is very common question if you are appearing interview for junior level programmer. Well, most noticeable differences are as below:
 Variables declared in a Java interface is by default final. An abstract class may contain non-final variables.
@@ -7,3 +9,15 @@ Java interface should be implemented using keyword "implements"; A Java abstract
 A Java class can implement multiple interfaces but it can extend only one abstract class.
 Interface is absolutely abstract and cannot be instantiated; A Java abstract class also cannot be instantiated, but can be invoked if a main() exists. Since Java 8, you can define default methods in interfaces.
 Abstract class are slightly faster than interface because interface involves a search before calling any overridden method in Java. This is not a significant difference in most of cases but if you are writing a time critical application than you may not want to leave any stone unturned.
+
+Or
+
+I tend to think of interfaces like contracts (binds the implementation to a specific syntax) and abstract classes like blueprints (helps define the basic structure and provide foundation). That way I remember to implement interfaces and extend abstract classes. BTW, this inheritance model is true to Java and PHP
+
+Array Lists
+
+ArrayList is a class that represents an array that can change it's size. All elements in an ArrayList must be objects, and they must have the same type.
+
+Annotations
+
+Annotations are used to provide metadata for Java code. Annotations don't modify the execution of code; however, they can be consumed in order to perform additional logic.
