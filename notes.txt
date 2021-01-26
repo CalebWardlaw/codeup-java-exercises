@@ -18,6 +18,6 @@ Array Lists
 
 ArrayList is a class that represents an array that can change it's size. All elements in an ArrayList must be objects, and they must have the same type.
 
-Annotations
+
 
 Annotations are used to provide metadata for Java code. Annotations don't modify the execution of code; however, they can be consumed in order to perform additional logic.
