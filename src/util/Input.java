@@ -1,59 +1,74 @@
 package util;
+
 import java.util.Scanner;
 
-
 public class Input {
+    private Scanner sc;
 
-    //Inside of util, create a class named Input that has a private property named scanner
-    private Scanner scanner;
-//    When an instance of this object is created,the scanner property should be set to a new instance
-//    of the Scanner class.
-    public Input() {
-        this.scanner = new Scanner(System.in);
+    public Input(){
+        this.sc = new Scanner(System.in);
     }
 
     public String getString(){
-        System.out.println("Enter a string");
-        //Must have return, since type is not void
-        return this.scanner.nextLine();
+        return this.sc.nextLine();
+    }
+
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return getString();
     }
 
     public boolean yesNo(){
-        System.out.println("Yes or no y/n");
-        return this.scanner.nextBoolean();
-    }
-    //Will need to be init. in person.java for min and max
-    public int getInt(int min, int max){
-        //set userInput for comparison by do while
-        int userInput = 0;
-        do {
-            System.out.print("Enter a number between " + min + " and " + max);
-            //Include userInput inside of do while so it can  change
-            userInput = getInt();
-        } while (userInput <= min || userInput >= max );
-        return userInput;
+        return yesNo("Please enter yes or no.");
     }
 
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String input = this.sc.next();
+        sc.nextLine();
+        return (input.trim().toLowerCase().equals("y") ||
+                input.trim().toLowerCase().equals("yes"));
+    }
+
+
     public int getInt(){
-        System.out.print("Enter a number : \n");
-        return this.scanner.nextInt();
+        System.out.println("Please enter an int.");
+        return this.sc.nextInt();
+    }
+
+    public int getInt(int min, int max){
+        return getInt(min,max,"Please enter an int between "+min+" and "+max);
+
+    }
+
+    public int getInt(int min, int max,String prompt){
+        int input;
+        do{
+            System.out.println(prompt);
+            input = this.sc.nextInt();
+        }while(input < min || input > max);
+
+        return input;
+    }
+
+    public double getDouble(){
+        System.out.println("Please enter a double.");
+        return this.sc.nextDouble();
     }
 
     public double getDouble(double min, double max){
-        double userInput = 0;
-        do{
-            System.out.print("Enter a double between " + min + " and" + max);
-            userInput = getDouble();
-        } while (userInput <= min || userInput >= max);
-        return userInput;
+        return getDouble(min,max,"Please enter a double between "+min+" and "+max);
     }
 
-    //Using in shapes, changed to enter radius
-    public double getDouble(){
-        System.out.print("Enter radius :");
-        return this.scanner.nextDouble();
+    public double getDouble(double min, double max,String prompt){
+        double input;
+        do{
+            System.out.println(prompt);
+            input = this.sc.nextDouble();
+        }while(input < min || input > max);
+
+        return input;
     }
-//    public double getDouble(double min, double max){
-//        System.out.printf("Enter a number between ")
-//    }
+
+
 }
