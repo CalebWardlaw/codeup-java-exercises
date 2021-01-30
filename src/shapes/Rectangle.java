@@ -1,8 +1,8 @@
 package shapes;
 
-import org.w3c.dom.ls.LSOutput;
 
-public class Rectangle {
+
+public class Rectangle extends Quadrilateral implements Measurable {
 
     //Initiate
     protected double length;
@@ -31,31 +31,4 @@ public class Rectangle {
     public void setWidth(double width){
         this.width = width;
     }
-
-
-
-
-
-
-
-
-
-    public double getPerimeter(){
-        double perimeter =  (2 * length) + (2 * width);
-        System.out.println("Calculating perimeter\n");
-        return perimeter;
-    }
-
-    public double getArea(){
-        double area = length*width;
-        System.out.println("Calculating area\n");
-        return area;
-    }
-
-//    Inside of your shapes directory, create a class named Rectangle. It should have protected
-//     properties for both length and width. Rectangle should define a constructor that
-//     accepts two numbers for length and width, and sets those properties.
-
-
-
 }
